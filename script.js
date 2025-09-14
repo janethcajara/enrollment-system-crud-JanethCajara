@@ -456,7 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function getYearById(id) {
         try {
-            const res = await fetch('http://localhost/SMS/api/Years&Semesters/getYears.php');
+            const res = await fetch('http://localhost/enrollment-system-crud-Janeth/api/Years&Semesters/getYears.php');
             const data = await res.json();
             if (data.success) {
                 return data.data.find(y => y.year_id == id);
@@ -549,7 +549,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function deleteYear(id) {
         if (!confirm('Are you sure you want to delete this year?')) return;
         try {
-            const res = await fetch('http://localhost/SMS/api/Years&Semesters/deleteYear.php', {
+            const res = await fetch('http://localhost/enrollment-system-crud-Janeth/api/Years&Semesters/deleteYear.php', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({year_id: id}),

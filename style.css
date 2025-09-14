@@ -4,7 +4,7 @@ body {
     background: #f9f9f9;
 }
 
-h1 {
+h1 { 
     text-align: center;
     color: #333;
 }
@@ -87,13 +87,13 @@ form button {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    nav {
+nav {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    nav button {
+nav button {
         width: 100%;
         max-width: 300px;
         margin: 5px 0;
