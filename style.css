@@ -1,31 +1,57 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background: #f9f9f9;
+    background: rgb(193, 221, 230);
 }
 
-h1 { 
+.header-container {
+  display: flex;
+  justify-content: center;   /* Centers horizontally */
+  align-items: center;       /* Centers vertically */
+  gap: 10px;                 /* Space between h1 and image */
+}
+
+/* Style for the logo image */
+.logo {
+  width: 100px;              /* Size of the image */
+  height: 100px;
+  border-radius: 50%;        /* Make image round */
+  object-fit: cover;         /* Cover the box without distortion */
+}
+
+h1 {
     text-align: center;
     color: #333;
 }
 
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#content {
+    flex: 1;
+}
+
 nav {
-    margin-bottom: 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
 }
 
 nav button {
     padding: 10px 15px;
     margin: 0 5px;
     border: none;
-    background: #2ce7c8;
+    background: #4792a5;
     color: white;
     cursor: pointer;
     border-radius: 5px;
 }
 
 nav button:hover, nav button.active {
-    background: #0056b3;
+    background: #63a3e7;
 }
 
 table {
@@ -43,18 +69,87 @@ th, td {
     text-align: left;
 }
 
-button.action-btn {
+/* Edit button - Green background */
+.edit-btn {
     margin-right: 5px;
     padding: 5px 10px;
     border: none;
-    background: #28a745;
+    background-color: #28a745; /* Green */
     color: white;
     cursor: pointer;
     border-radius: 3px;
+    transition: background-color 0.3s;
 }
 
-button.action-btn.delete {
-    background: #dc3545;
+.edit-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Delete button - Red background */
+.delete-btn {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #dc3545; /* Red */
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Action buttons for other entities */
+.action-btn[class*="edit"] {
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+}
+
+.action-btn[class*="edit"]:hover {
+    background-color: #218838; /* Darker green */
+}
+
+.action-btn[class*="delete"] {
+    background-color: #dc3545; /* Red */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+}
+
+.action-btn[class*="delete"]:hover {
+    background-color: #c82333; /* Darker red */
+}
+
+/* Align actions column to right */
+td:last-child {
+    text-align: right;
+}
+
+/* Add buttons green */
+button[id^="btn-add"] {
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button[id^="btn-add"]:hover {
+    background-color: #218838; /* Darker green */
 }
 
 form {
@@ -79,24 +174,34 @@ form button {
     margin-top: 10px;
     padding: 10px 15px;
     border: none;
-    background: #007BFF;
+    background: #28a745; /* Green */
     color: white;
     cursor: pointer;
     border-radius: 5px;
 }
 
+form button:hover {
+    background: #218838; /* Darker green */
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-nav {
-        display: flex;
+    .main-container {
         flex-direction: column;
-        align-items: center;
     }
 
-nav button {
-        width: 100%;
-        max-width: 300px;
-        margin: 5px 0;
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    nav button {
+        width: auto;
+        margin: 5px;
     }
 
     table {
@@ -117,6 +222,13 @@ nav button {
     }
 
     form button {
+        width: 100%;
+    }
+
+    /* Adjust button sizes on mobile */
+    .edit-btn, .delete-btn, .action-btn {
+        padding: 8px 12px;
+        margin-bottom: 5px;
         width: 100%;
     }
 }
