@@ -1,4 +1,4 @@
-#enrollment-system-crud-LuisAdam
+#enrollment-system-crud-JanethCajara
 
 #Description
 This is a web-based Student Enrollment System built using PHP for the backend API and JavaScript for the frontend. It provides a user-friendly interface to manage students, programs, years and semesters, subjects, and enrollments. Users can perform CRUD (Create, Read, Update, Delete) operations on these entities through a tabbed interface.
@@ -35,13 +35,13 @@ Configure Database Connection:
 
 #The database connection is configured in api/db.php with the following details:
 Host: localhost
-Database: enrollment_db
+Database: student_enrollment_db
 User: root
 Password: (empty)
 Ensure these match your MySQL setup.
 Run the Application:
 Open your web browser.
-Navigate to http://localhost/SMS/.
+Navigate to http://localhost/enrollment-system-Janeth/.
 The application should load, and you can start managing data through the tabs.
 
 #Notes
@@ -50,5 +50,5 @@ If you encounter any database connection errors, verify the MySQL credentials in
 
 
 #Author
-Name: Luis Adam Dela Cruz
+Name: Janeth M. Cajara
 Section: 3-A
