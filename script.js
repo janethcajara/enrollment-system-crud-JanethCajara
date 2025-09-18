@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const formModal = document.getElementById('form-modal');
     const formModalBody = document.getElementById('form-modal-body');
     const formModalClose = document.getElementById('form-modal-close');
-
+    
     function showFormModal(htmlContent) {
         formModalBody.innerHTML = htmlContent;
         formModal.style.display = 'block';
