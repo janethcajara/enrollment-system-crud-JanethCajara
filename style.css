@@ -6,17 +6,16 @@ body {
 
 .header-container {
   display: flex;
-  justify-content: center;   /* Centers horizontally */
-  align-items: center;       /* Centers vertically */
-  gap: 10px;                 /* Space between h1 and image */
+  justify-content: center;   
+  align-items: center;       
+  gap: 10px;                 
 }
 
-/* Style for the logo image */
 .logo {
-  width: 100px;              /* Size of the image */
+  width: 100px;             
   height: 100px;
-  border-radius: 50%;        /* Make image round */
-  object-fit: cover;         /* Cover the box without distortion */
+  border-radius: 50%;        
+  object-fit: cover;     
 }
 
 h1 {
