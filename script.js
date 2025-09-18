@@ -383,7 +383,6 @@ async function loadStudents() {
             <thead><tr><th>ID</th><th>Year From</th><th>Year To</th><th>Actions</th></tr></thead>
             <tbody id="years-tbody"></tbody>
         </table>
-        <hr>
         <button id="btn-add-semester">Add Semester</button>
         <table>
             <thead><tr><th>ID</th><th>Name</th><th>Year</th><th>Actions</th></tr></thead>
